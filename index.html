@@ -13,12 +13,73 @@
     <title>Weather App Project for SheCodes Plus</title>
   </head>
   <body>
-    <h1>Weather App</h1>
+     <div class=".container-fluid">
+      <div class="weatherApp">
+        <form id="city-search-submit-form">
+          <div class="row">
+            <div class="col-9">
+              <!--search bar for new city-->
+              <form id="searchBar">
+                <input
+                class="form-control searchCity"
+                id="city-query"
+                type="search"
+                placeholder="Search for a new city..."
+                />
+              </div>
+              <!--submit button for new city-->
+              <div class="col-3">
+                <input type="submit"
+                class="form-control submitButton">
+                </div>
+              </div>
+              </form>
+              <div class="row justify-content-start">
+                <!--selected city information-->
+                <div class="col-6">
+                  <div class="cityBlock">
+                    <h1 id="selectedCity">Washington, D.C.</h1>
+                    <ul>
+                      <li id="current-date-time">Tue, March 15, 2022</li>
+                      <li>max <span id="maxTemp">22</span>°C</li>
+                      <li>min <span id="minTemp">6</span>°C</li>
+                      <li>humidity <span id="humidity">0</span>%</li>
+                      <li>wind speed <span id="windSpeed">0</span>km/h</li>
+                    </ul>
+                  </div>
+                </div>
+                <!--weather for searched city-->
+                <div class="col-6">
+                  <div class="weatherBlock">
+                    <div id="degreesDescription">
+                      <ul>
+                        <li id="weatherDescription">Partly Sunny</li>
+                        <li> <span id="currentTemp">20</span></li>
+                        <a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a>
+                      </li>
+                      </ul>
+                    </div>
+                     <!-- finish putting in partly cloudly image in 
+                    <img
+                  clcass"partlyCloudy float-none"
+                src="./images/partlyCloudy.png"
+              alt="clipart image of a sun hidden by some clouds"
+            id="weatherMainImage"-->
+                  </div>
+                </div>
+              </div>
+   <!--forecast-->
+              <div class="weather-forecast" id="forecast">
+              </div>
+            </div>
+         
+    
     <!-- link to GitHub -->
           <footer>
           <a href="https://github.com/tammiramsey/SheCodesPlusFinalProject" target="_blank"> Open-source code </a>
           by <a href="https://www.linkedin.com/in/tammi-ramsey-90892426/" target="_blank">Tammi Ramsey</a> </footer>
-    <!--js link-->
+       </div>
+          <!--js link-->
     <script src=:"src/app.js"></script> 
   </body>
 </html>
