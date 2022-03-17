@@ -120,7 +120,8 @@ img {
 #weatherMainImg {
   display: inline;
   margin: auto;
-  width: 75px;
+  width: 125px;
+  height: 125px;
 }
 
 .weather-forcast-day {
