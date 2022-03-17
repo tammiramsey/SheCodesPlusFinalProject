@@ -1,3 +1,156 @@
-h1 {
-  color: blue;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0px 150px;
+  padding: 0px 60px;
+}
+
+.weatherAppWrap {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 750px;
+}
+
+#city-search-submit-form {
+  margin-bottom: 10px;
+}
+
+#searchBar {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.searchCityBar {
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0 auto;
+}
+
+.submitButton {
+  margin: 0 auto;
+  padding: 0px;
+  height: 40px;
+  background-color: skyblue;
+}
+
+#current-location-btn {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.cityBlock {
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.cityBlock #selectedCity {
+  color: #000;
+}
+
+ul {
+  color: #70757a;
+  padding: 0;
+  margin: 0px 0px 20px;
+  display: inline-block;
+  line-height: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+p {
+  font-size: small;
+}
+
+.weather-forecast {
+  font-size: small;
+}
+
+.row .justify-content-start {
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  margin: 0;
+  margin-top: 10px;
+  width: 40px;
+}
+
+.weatherBlock {
+  margin: 15px 0px auto;
+  color: black;
+  text-align: center;
+}
+
+#weatherDescription {
+  color: #000;
+}
+
+#currentTemp {
+  color: #000;
+}
+
+.weatherBlock .active {
+  color: black;
+  cursor: default;
+}
+
+.weatherBlock .active:hover {
+  text-decoration: none;
+}
+
+#degreesDescription {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+#weatherMainImg {
+  display: inline;
+  margin: auto;
+  width: 75px;
+}
+
+.weather-forcast-day {
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.weather-forecast-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.weather-forecast-temp {
+  text-align: center;
+  font-size: small;
+}
+
+.weather-forecast-temp .weather-forecast-temp-min {
+  color: #70757a;
+  margin-left: 3px;
+}
+
+footer {
+  text-align: center;
+  font-size: small;
+}
+.githubLink {
+  text-decoration-line: none;
 }
