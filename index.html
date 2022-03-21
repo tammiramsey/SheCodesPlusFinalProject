@@ -35,16 +35,17 @@
               </div>
               </form>
               <div class="row justify-content-start">
+                
                 <!--selected city information-->
                 <div class="col-6">
                   <div class="cityBlock">
                     <h1 id="selectedCity">Washington, D.C.</h1>
                     <ul>
                       <li id="current-date-time"></li>
-                      <li>max <span id="maxTemp">22</span>°C</li>
-                      <li>min <span id="minTemp">6</span>°C</li>
-                      <li>humidity <span id="humidity">0</span>%</li>
-                      <li>wind speed <span id="windSpeed">0</span>km/h</li>
+                      <li>max <span id="maxTemp"></span>°C</li>
+                      <li>min <span id="minTemp"></span>°C</li>
+                      <li>humidity <span id="humidity"></span>%</li>
+                      <li>wind speed <span id="windSpeed"></span>km/h</li>
                     </ul>
                   </div>
                 </div>
@@ -69,8 +70,17 @@
                   </div>
                 </div>
               </div>
+              <!--button for current location -->
+                <div class="col-3">
+                <button type="button"
+                     id="current-location"
+                    class="btn btn-info">
+                     Current Location
+                </button>
+                </div>
    <!--forecast-->
               <div class="weather-forecast" id="forecast">
+                Forecast 
               </div>
             </div>
          
