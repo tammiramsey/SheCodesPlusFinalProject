@@ -84,8 +84,6 @@ function displayForecast(response) {
 
 // city into coordinates
 function getForecast(coordinates) {
-    let coordinates.lat = position.coords.latitude;
-    let coordinates.long = position.coords.longitude;
   let apiKey = "f8cd1cfec67de5e9948c7667222d56ff";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -95,7 +93,7 @@ function getForecast(coordinates) {
 
 function displayWeatherCondition(response) {
   document.querySelector("#selectedCity").innerHTML = response.data.name;
-  document.querySelector("#temperatureNow").innerHTML = Math.round(
+  document.querySelector("#currentTemp").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#maxTemp").innerHTML = Math.round(
@@ -111,13 +109,13 @@ function displayWeatherCondition(response) {
     response.data.weather[0].main;
   document.querySelector("#windSpeed").innerHTML = response.data.wind.speed;
   document
-    .querySelector("#weatherMainImg")
+    .querySelector("#weatherMainImage")
     .setAttribute(
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   document
-    .querySelector("#weatherMainImg")
+    .querySelector("#weatherMainImage")
     .setAttribute(
       "alt",
       `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
@@ -174,17 +172,15 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 //get current location button
 function searchCurrentLocation(position) {
-     let coordinates.lat = position.coords.latitude;
-    let coordinates.long = position.coords.longitude;
   let apiKey = "f8cd1cfec67de5e9948c7667222d56ff";
   let apiUrlCurrentLoc = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coordinates.lat}&lon=${position.coordinates.long}&appid=${apiKey}`;
   axios.get(apiUrl).then(displayWeatherCondition);
   console.log(apiUrlCurrentLoc);
 }
 
-function getCurrentLocation(event){
-    event.preventDefault();
-    navigator.geolocation.getCurrentPosition(searchCurrentLocation);
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
 
 let current = document.querySelector("#current-location");
