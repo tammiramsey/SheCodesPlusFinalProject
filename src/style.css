@@ -143,9 +143,36 @@ img {
   font-size: small;
 }
 
-.weather-forecast-temp .weather-forecast-temp-min {
+.weather-forecast-temp strong {
   color: #70757a;
   margin-left: 3px;
+}
+
+.weather-forecast-temp-min {
+  color: #70757a;
+  margin-left: 3px;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+}
+
+.future-forecast-day {
+  font-size: 16px;
+}
+
+.future-forecast-temp-min {
+  opacity: 0.4;
+}
+
+.future-forecast-temp {
+  font-size: 13px;
+}
+
+#future-forecast-img {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 footer {
@@ -154,4 +181,5 @@ footer {
 }
 .githubLink {
   text-decoration-line: none;
+  text-align: center;
 }
