@@ -48,7 +48,7 @@ let today = document.querySelector("#current-date-time");
 
 today.innerHTML = formatDate();
 
-// display forecasted weather
+// display forecasted weather for the current day
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -133,6 +133,9 @@ function search(city) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+//choose default city
+search("Washington D.C.");
+
 function submitCity(event) {
   event.preventDefault();
   let city = document.querySelector("#city-query").value;
@@ -185,6 +188,3 @@ function getCurrentLocation(event) {
 
 let current = document.querySelector("#current-location");
 current.addEventListener("click", getCurrentLocation);
-
-//choose default city
-search("Washington D.C.");
