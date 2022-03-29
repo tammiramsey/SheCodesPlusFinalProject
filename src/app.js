@@ -82,6 +82,14 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+// display 5 day future forecast
+function displayFutureForecast () {
+  let forecastElement = document.querySelector(#future-forecast);
+
+  forecastElement.innerHTML = ``
+}
+
+
 // city into coordinates
 function getForecast(coordinates) {
   let apiKey = "f8cd1cfec67de5e9948c7667222d56ff";
@@ -135,6 +143,8 @@ function search(city) {
 
 //choose default city
 search("Washington D.C.");
+
+displayFutureForecast();
 
 function submitCity(event) {
   event.preventDefault();
