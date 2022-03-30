@@ -51,7 +51,32 @@ today.innerHTML = formatDate();
 // display forecasted weather for the current day
 function displayForecast(response) {
   let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#future-forecast");
+
+   let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursady",
+    "Friday",
+    "Saturday",
+  ];
+
+  let forecastHTML = `<div class="row">`;
+  function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#future-forecast");
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursady",
+    "Friday",
+    "Saturday",
+  ];
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
@@ -60,9 +85,9 @@ function displayForecast(response) {
         forecastHTML +
         `
       <div class="col-2">
-        <div class="weather-forcast-day"> ${formatDayForecast(
-          forecastDay.dt
-        )} </div>
+        <div class="weather-forcast-day"> ${
+          days[new Date(forecastDay.dt * 1000).getDay()]
+        } </div>
         <img class="weather-forecast-img" src="https://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png" />
@@ -81,12 +106,29 @@ function displayForecast(response) {
 
   forecastElement.innerHTML = forecastHTML;
 }
-
 // display 5 day future forecast
 function displayFutureForecast () {
   let forecastElement = document.querySelector(#future-forecast);
 
-  forecastElement.innerHTML = ``
+  forecastElement.innerHTML = ` <div class="weather-future-forecast" id="future-forecast">
+                <div class="col-2 text-center">
+                  <div class="future-forcast-day">
+                    Fri
+                  </div>
+                    <img src="./images/sun.png"
+                   id="future-forecast-img"
+                    />
+                  <div class="future-forecast-temp">
+                   <span class="future-forecast-temp-max">
+                    18º
+                    </span>
+                      | 
+                    <span class="future-forecast-temp-min">
+                      12º
+                    </span>
+                  </div>
+                  </div>
+                </div>`;
 }
 
 
