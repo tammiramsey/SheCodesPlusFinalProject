@@ -96,15 +96,7 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#future-forecast");
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursady",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Wedn", "Thurs", "Fri", "Sat"];
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
