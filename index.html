@@ -13,107 +13,94 @@
     <title>Weather App Project for SheCodes Plus</title>
   </head>
   <body>
-     <div class=".container-fluid">
-      <div class="weatherAppWrap">
-        <form id="city-search-submit-form">
-          <div class="row">
-            <div class="col-6">
-              <!--search bar for new city-->
-              <form id="searchBar">
-                <input
-                class="form-control searchCity"
-                id="city-query"
-                type="search"
-                placeholder="Enter a new city..."
-                />
-              </div>
-              <!--submit button for new city-->
-              <div class="col-3">
-                <input type="submit"
-                class="form-control submitButton">
-                </div>
-              </div>
-              </form>
-              <div class="row justify-content-start">
-                
-                <!--selected city information-->
+    <div class="container-fluid">
+        <div class="weatherAppWrap">
+            <div class="row">
                 <div class="col-6">
-                  <div class="cityBlock">
-                    <h1 id="selectedCity">Washington, D.C.</h1>
-                    <ul>
-                      <li id="current-date-time"></li>
-                      <li>max <span id="maxTemp"></span>°C</li>
-                      <li>min <span id="minTemp"></span>°C</li>
-                      <li>humidity <span id="humidity"></span>%</li>
-                      <li>wind speed <span id="windSpeed"></span>km/h</li>
-                    </ul>
-                  </div>
-                </div>
-                <!--weather for searched city-->
-                <div class="col-3">
-                  <div class="weatherBlock">
-                    <div id="degreesDescription">
-                      <ul>
-                        <li id="weatherDescription">Partly Cloudy</li>
-                        <li> <span id="currentTemp">20°</span></li>
-                        <a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a>
-                      </li>
-                      </ul>
-                    </div>
-                    
-                    <!--forecast image-->
-                    <img
-                      class"partlyCloudy float-none"
-                      src="./images/partlyCloudy.png"
-                      alt="black and white clipart image of a sun hidden by some clouds"
-                      id="weatherMainImage">
-                  </div>
-                </div>
-              </div>
-              <!--button for current location -->
-                <div class="col-3">
-                <button type="button"
-                     id="current-location"
-                    class="btn btn-info">
-                     Current Location
-                </button>
-                </div>
-                </div>
-                </div>
-              </div>
+                    <!--search bar for new city-->
+                    <form id="searchBar">
+                        <input
+                            class="form-control searchCity"
+                            id="city-query"
+                            type="search"
+                            placeholder="Enter a new city..."
+                            />
+                </div>  
+                        <!--submit button for new city query-->    
+                            <div class="col-3">
+                                <input
+                                    class="form-control submitButton"
+                                    type="submit"
+                                />
+                            </div>      
+                    </form>
+                <div class="row justifty-content-start">
+                    <!--selected city information-->
+                        <div class="col-6">
+                            <div class="cityBlock">
+                                <h1 id="selectedCity">
+                                    Washington, D.C.
+                                </h1>
+                                    <ul>
+                                        <li id="current-date-time"></li>
+                                        <li max <span id="maxTemp"></span>°C</li>
+                                        <li min <span id="minTemp"></span>°C</li>
+                                        <li humidity <span id="humidity"></span>%</li>
+                                        <li wind speed <span id="windSpeed"></span>km/h</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    <!--weather for searched city-->    
+                        <div class="col-3">
+                            <div class="weatherBlock">
+                                <div id="degreesDescription">
+                                    <ul>
+                                        <li id="weatherDescription">Partly Cloudy</li>
+                                        <li><span id="currentTemp">20°</span></li>
+                                        <a href="#" id="celsius-link">°C</a> | 
+                                        <a href="#" id="fahrenheit-link">°F</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                     <!--forecast image-->     
+                                <img 
+                                    class="partlyCloudy float-none"
+                                    id="weatherMainImage"
+                                    src="./images/partlyCloudy.png"
+                                    alt="black and white clipart image of a sun hidden by some clouds"
+                            </div>
+                          </div>
+                   <!--button for current location-->
+                        <div class="col-3">
+                            <button 
+                                class="btn btn-info"
+                                id="current-location"
+                                type="button">
+                                Current Location
+                            </button>
+                        </div>
+              
+     <!--5 day forecast-->
+                        <div class="futre-forecast-day">
+                            <div class="weather-future-forecast"
+                                id="future-forecast">
+                                    <div class="col-2 text-center">
+                                        <img 
+                                            src="./images/sun.png"
+                                            id="future-forecast-img"
+                                            />
+                                            <div class="future-forecast-temp">
+                                                <span class="future-forecast-temp-max"></span>
+                                                |
+                                                <span class="future-forecast-temp-min"></span>
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
             </div>
-     <!--5 day forecast-->     
-
-                <div class="future-forcast-day">
-              <div class="weather-future-forecast" id="future-forecast">
-                <div class="col-2 text-center">
-                  <div class="future-forcast-day">
-                </div>
-                 <img src="./images/sun.png"
-                  id="future-forecast-img"
-                 />
-                <div class="future-forecast-temp">
-                  </div>
-                    <img src="./images/sun.png"
-                   id="future-forecast-img"
-                    />
-                  <div class="future-forecast-temp">
-                   <span class="future-forecast-temp-max">
-                    
-                  </span>
-                  | 
-                  <span class="future-forecast-temp-min">
-                   
-                   </span>
-                   
-                  </div>
-                  </div>
-                </div>
-                </div>
-                </div>
-              </div>
-            </div>
-            
+        </div>
+    </div>
     <!-- link to GitHub -->
           <footer>
           <a href="https://github.com/tammiramsey/SheCodesPlusFinalProject" target="_blank"> Open-source code </a>
