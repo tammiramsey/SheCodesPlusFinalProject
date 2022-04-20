@@ -221,7 +221,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 //get current location button
 function searchCurrentLocation(position) {
   let apiKey = "f8cd1cfec67de5e9948c7667222d56ff";
-  let apiUrlCurrentLoc = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coordinates.latitude}&lon=${position.coordinates.longitude}&appid=${apiKey}`;
+  let apiUrlCurrentLoc = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
   axios.get(apiUrl).then(displayWeatherCondition);
   console.log(apiUrlCurrentLoc);
 }
