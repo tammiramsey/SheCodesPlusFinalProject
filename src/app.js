@@ -215,13 +215,13 @@ let celsiusTemperature = null;
 // let fahrenheitLink = document.querySelector("#fahrenheit-link");
 // fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
+// let celsiusLink = document.querySelector("#celsius-link");
+// celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 //get current location button
 function searchCurrentLocation(position) {
   let apiKey = "f8cd1cfec67de5e9948c7667222d56ff";
-  let apiUrlCurrentLoc = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
+  let apiUrlCurrentLoc = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrlCurrentLoc).then(displayWeatherCondition);
   console.log(apiUrlCurrentLoc);
 }
