@@ -47,7 +47,8 @@ body {
   #current-location{
     font-size: 16px;
     color: white;
-    padding: 0;
+    padding: 4px 2px;
+    
   }
 }
 
